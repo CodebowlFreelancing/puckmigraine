@@ -48,8 +48,14 @@
     "@material-ui/core": "^3.9.2",
     "date-fns": "^1.30.1",
     "fluture": "^10.3.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "sanctuary": "^0.15.1"
-  }
+  },
+  "alias": {
+    "common": "./src/common",
+    "ui": "./src/ui"
+  },
+  "browserslist": "last 2 versions and not ie <= 11"
 }
