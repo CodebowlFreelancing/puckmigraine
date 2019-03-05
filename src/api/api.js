@@ -1,7 +1,7 @@
 import http from './http'
 
 const endpoints = {
-  entry: '/entry',
+  entries: '/entries',
 }
 
 const createPayload = (method, body) => ({
@@ -9,4 +9,4 @@ const createPayload = (method, body) => ({
   body: JSON.stringify(body),
 })
 
-export const postEntry = entry => http.fetchAsJSON(endpoints.entry, createPayload(http.method.POST, entry))
+export const postEntry = entry => http.fetchAsJSON(endpoints.entries, createPayload(http.method.POST, entry))

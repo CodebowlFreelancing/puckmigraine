@@ -1,8 +1,24 @@
 {
-  "entry": [
+  "entries": [
     {
-      "id": 1,
-      "type": "MIGRAINE_START"
+      "datetime": "2019-03-04T23:45:35.667Z",
+      "entryType": "ATTACK_START",
+      "id": 4
+    },
+    {
+      "datetime": "2019-03-05T01:00:35.667Z",
+      "entryType": "ATTACK_END",
+      "id": 5
+    },
+    {
+      "datetime": "2019-03-07T06:00:52.624Z",
+      "entryType": "ATTACK_START",
+      "id": 6
+    },
+    {
+      "datetime": "2019-03-07T14:00:52.624Z",
+      "entryType": "ATTACK_END",
+      "id": 7
     }
   ]
 }

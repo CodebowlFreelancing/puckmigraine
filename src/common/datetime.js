@@ -4,7 +4,6 @@ import {curry2, curry3, compose} from 'sanctuary'
 import {displayTwoDigits} from './number'
 
 const dateFormatFi = 'D.M.YYYY'
-const timeFormatFi = 'HH:mm'
 
 export const now = () => new Date()
 
@@ -25,7 +24,5 @@ export const setTime = curry3((date, hours, minutes) => compose(lazySetHours(hou
 const display = curry3((dateFormat, locale, date) => format(date, dateFormat, locale))
 
 export const displayDate = display(dateFormatFi)(fiLocale)
-
-export const displayTime = display(timeFormatFi)(fiLocale)
 
 export const displayHourAndMinutes = (hour, minutes) => `${displayTwoDigits(hour)}:${displayTwoDigits(minutes)}`

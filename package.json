@@ -4,9 +4,10 @@
   "description": "personal migraine diary",
   "private": true,
   "scripts": {
-    "start": "parcel ./src/index.html",
+    "start": "run-p start:parcel start:json-server",
+    "start:parcel": "parcel ./src/index.html",
+    "start:json-server": "json-server --watch db.json --static ./dist",
     "watch": "parcel watch ./src/index.html",
-    "start:mockServer": "json-server --watch db.json",
     "prebuild": "rm -rf dist",
     "build": "parcel build ./src/index.html",
     "lint": "eslint .",
@@ -40,6 +41,7 @@
     "jest-dom": "^3.1.2",
     "jest-fetch-mock": "^2.1.1",
     "json-server": "^0.14.2",
+    "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.11.0",
     "prettier": "^1.16.4",
     "react-testing-library": "^6.0.0"

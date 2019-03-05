@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import {ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails} from '@material-ui/core'
 import Entry from '../entry'
 
-const Time = ({display}) => (
+const Time = ({display, hour, minutes}) => (
   <ExpansionPanel>
     <ExpansionPanelSummary>{display}</ExpansionPanelSummary>
     <ExpansionPanelDetails>
-      <Entry />
+      <Entry hour={hour} minutes={minutes} />
     </ExpansionPanelDetails>
   </ExpansionPanel>
 )
