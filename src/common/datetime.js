@@ -1,6 +1,7 @@
 import {format, addDays, setHours, setMinutes} from 'date-fns'
 import fiLocale from 'date-fns/locale/fi'
 import {curry2, curry3, compose} from 'sanctuary'
+import {displayTwoDigits} from './number'
 
 const dateFormatFi = 'D.M.YYYY'
 const timeFormatFi = 'HH:mm'
@@ -26,3 +27,5 @@ const display = curry3((dateFormat, locale, date) => format(date, dateFormat, lo
 export const displayDate = display(dateFormatFi)(fiLocale)
 
 export const displayTime = display(timeFormatFi)(fiLocale)
+
+export const displayHourAndMinutes = (hour, minutes) => `${displayTwoDigits(hour)}:${displayTwoDigits(minutes)}`
