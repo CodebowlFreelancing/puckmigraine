@@ -1,23 +1,28 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import {Button, FormControl, Grid, Input, InputLabel, NativeSelect} from '@material-ui/core'
-import currentDateContext from 'common/currentDateContext'
-import {setTime} from 'common/datetime'
+import {useStore} from 'store'
 import {postEntry} from 'api'
 
 const entryList = [{value: 'ATTACK_START', display: 'Kohtaus alkaa'}, {value: 'ATTACK_END', display: 'Kohtaus päättyy'}]
 
 const entryType = 'entryType'
 
-const saveEntry = (currentDate, hour, minutes) => event => {
-  event.preventDefault()
-  const datetime = setTime(currentDate)(hour)(minutes)
-  postEntry({datetime, [entryType]: event.target[entryType].value}).fork(console.error, console.info)
-}
+const Entry = ({timeslot, hour, minutes}) => {
+  const {
+    store: {dateIdentifier},
+    actions: {addEntryToTimeslot},
+  } = useStore()
 
-const Entry = ({hour, minutes}) => {
-  const currentDate = useContext(currentDateContext)
+  const saveEntry = (dateIdentifier, hour, minutes) => event => {
+    event.preventDefault()
+    postEntry({...dateIdentifier, hour, minutes, [entryType]: event.target[entryType].value}).fork(
+      console.error,
+      entry => addEntryToTimeslot({timeslot, entry})
+    )
+  }
+
   return (
-    <form style={{width: '100%'}} onSubmit={saveEntry(currentDate, hour, minutes)}>
+    <form style={{width: '100%'}} onSubmit={saveEntry(dateIdentifier, hour, minutes)}>
       <Grid wrap="nowrap" justify="space-between" container>
         <FormControl>
           <InputLabel htmlFor={entryType}>Merkintä</InputLabel>

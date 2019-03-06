@@ -36,7 +36,6 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react-hooks": "^1.4.0",
     "jest": "^24.1.0",
     "jest-dom": "^3.1.2",
     "jest-fetch-mock": "^2.1.1",
@@ -50,15 +49,15 @@
     "@material-ui/core": "^3.9.2",
     "date-fns": "^1.30.1",
     "fluture": "^10.3.1",
-    "fluture-sanctuary-types": "^3.1.0",
     "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "sanctuary": "^0.15.1"
+    "react-dom": "^16.8.3"
   },
   "alias": {
     "api": "./src/api",
-    "common": "./src/common"
+    "common": "./src/common",
+    "store": "./src/store"
   },
   "browserslist": "last 2 versions and not ie <= 11"
 }

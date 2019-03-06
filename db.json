@@ -1,24 +1,58 @@
 {
   "entries": [
     {
-      "datetime": "2019-03-04T23:45:35.667Z",
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 6,
+      "hour": 0,
+      "minutes": 0,
       "entryType": "ATTACK_START",
+      "id": 1
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 6,
+      "hour": 3,
+      "minutes": 30,
+      "entryType": "ATTACK_END",
+      "id": 2
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 6,
+      "hour": 6,
+      "minutes": 0,
+      "entryType": "ATTACK_START",
+      "id": 3
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 6,
+      "hour": 6,
+      "minutes": 15,
+      "entryType": "ATTACK_END",
       "id": 4
     },
     {
-      "datetime": "2019-03-05T01:00:35.667Z",
-      "entryType": "ATTACK_END",
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 6,
+      "hour": 7,
+      "minutes": 0,
+      "entryType": "ATTACK_START",
       "id": 5
     },
     {
-      "datetime": "2019-03-07T06:00:52.624Z",
-      "entryType": "ATTACK_START",
-      "id": 6
-    },
-    {
-      "datetime": "2019-03-07T14:00:52.624Z",
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 6,
+      "hour": 7,
+      "minutes": 15,
       "entryType": "ATTACK_END",
-      "id": 7
+      "id": 6
     }
   ]
 }

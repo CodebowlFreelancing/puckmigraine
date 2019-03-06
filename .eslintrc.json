@@ -13,7 +13,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["babel", "prettier", "react-hooks"],
+  "plugins": ["babel", "prettier"],
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "indent": ["error", 2],
@@ -27,8 +27,6 @@
     "babel/no-invalid-this": 2,
     "babel/object-curly-spacing": 2,
     "babel/quotes": ["error", "single"],
-    "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "prettier/prettier": "error"
   }
 }

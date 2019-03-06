@@ -1,29 +1,32 @@
-import React, {useContext} from 'react'
-import PropTypes from 'prop-types'
+import React, {useState, useEffect} from 'react'
 import {Grid, Icon, IconButton, Typography} from '@material-ui/core'
-import {displayDate} from 'common/datetime'
-import currentDateContext from 'common/currentDateContext'
+import {applySpec} from 'ramda'
+import {useStore} from 'store'
+import {today, displayDate, nextDate, previousDate, getYear, getMonth, getDate} from 'common/datetime'
 
-const Header = ({previousDate, nextDate}) => {
-  const currentDate = useContext(currentDateContext)
+const createDateIdentifier = applySpec({year: getYear, month: getMonth, dayOfMonth: getDate})
+
+const DatePicker = React.memo(() => {
+  const {
+    actions: {setDateIdentifier},
+  } = useStore()
+  const [currentDate, setCurrentDate] = useState(today)
+
+  useEffect(() => setDateIdentifier(createDateIdentifier(currentDate)), [currentDate])
+
   return (
     <Grid wrap="nowrap" justify="space-between" alignItems="center" container>
-      <IconButton onClick={previousDate}>
+      <IconButton onClick={() => setCurrentDate(previousDate(currentDate))}>
         <Icon>arrow_back</Icon>
       </IconButton>
       <Typography variant="title" color="textPrimary" align="center" inline>
         {displayDate(currentDate)}
       </Typography>
-      <IconButton onClick={nextDate}>
+      <IconButton onClick={() => setCurrentDate(nextDate(currentDate))}>
         <Icon>arrow_forward</Icon>
       </IconButton>
     </Grid>
   )
-}
+})
 
-Header.propTypes = {
-  previousDate: PropTypes.func.isRequired,
-  nextDate: PropTypes.func.isRequired,
-}
-
-export default Header
+export default DatePicker
