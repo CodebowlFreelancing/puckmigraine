@@ -15,10 +15,13 @@ const AddEntry = ({timeslot, hour, minutes}) => {
 
   const saveEntry = (dateIdentifier, hour, minutes) => event => {
     event.preventDefault()
-    postEntry({...dateIdentifier, hour, minutes, [entryTypeField]: event.target[entryTypeField].value}).fork(
-      console.error,
-      entry => addEntryToTimeslot({timeslot, entry})
-    )
+    postEntry({
+      ...dateIdentifier,
+      hour,
+      minutes,
+      timestamp: new Date(dateIdentifier.year, dateIdentifier.month, dateIdentifier.dayOfMonth, hour, minutes),
+      [entryTypeField]: event.target[entryTypeField].value,
+    }).fork(console.error, entry => addEntryToTimeslot({timeslot, entry}))
   }
 
   return (

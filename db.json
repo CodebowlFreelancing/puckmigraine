@@ -71,6 +71,54 @@
       "minutes": 45,
       "entryType": "ATTACK_END",
       "id": 8
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 8,
+      "hour": 16,
+      "minutes": 0,
+      "entryType": "ATTACK_START",
+      "id": 9
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 8,
+      "hour": 22,
+      "minutes": 30,
+      "entryType": "ATTACK_END",
+      "id": 10
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 7,
+      "hour": 17,
+      "minutes": 0,
+      "timestamp": "2019-03-07T15:00:00.000Z",
+      "entryType": "ATTACK_START",
+      "id": 11
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 7,
+      "hour": 20,
+      "minutes": 0,
+      "timestamp": "2019-03-07T18:00:00.000Z",
+      "entryType": "ATTACK_END",
+      "id": 12
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 7,
+      "hour": 17,
+      "minutes": 0,
+      "timestamp": "2019-03-07T15:00:00.000Z",
+      "entryType": "ATTACK_END",
+      "id": 13
     }
   ]
 }
