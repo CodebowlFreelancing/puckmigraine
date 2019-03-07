@@ -53,6 +53,24 @@
       "minutes": 15,
       "entryType": "ATTACK_END",
       "id": 6
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 7,
+      "hour": 13,
+      "minutes": 30,
+      "entryType": "ATTACK_START",
+      "id": 7
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "dayOfMonth": 7,
+      "hour": 14,
+      "minutes": 45,
+      "entryType": "ATTACK_END",
+      "id": 8
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React, {useRef, useLayoutEffect} from 'react'
 import PropTypes from 'prop-types'
 import {ListItem, ListItemText} from '@material-ui/core'
-import Entry from '../entry'
+import {AddEntry, Entries} from '../entry'
 
 const Time = ({display, timeslot, hour, minutes, entries, selected, select}) => {
   const listItemRef = useRef(null)
@@ -17,12 +17,12 @@ const Time = ({display, timeslot, hour, minutes, entries, selected, select}) => 
       <ListItem button selected={selected} onClick={() => select(timeslot)}>
         <>
           <ListItemText primary={display} />
-          {entries.map(({entryType}) => entryType)}
+          <Entries entries={entries} />
         </>
       </ListItem>
       {selected && (
         <ListItem>
-          <Entry timeslot={timeslot} hour={hour} minutes={minutes} />
+          <AddEntry timeslot={timeslot} hour={hour} minutes={minutes} />
         </ListItem>
       )}
     </div>

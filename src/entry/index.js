@@ -1,3 +1,4 @@
-import Entry from './entry'
+import AddEntry from './addEntry'
+import Entries from './entries'
 
-export default Entry
+export {AddEntry, Entries}

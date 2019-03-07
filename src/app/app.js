@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppBar, CssBaseline} from '@material-ui/core'
+import {AppBar, CssBaseline, Paper} from '@material-ui/core'
 import Datepicker from '../datepicker'
 import Times from '../times'
 import {Store} from 'store'
@@ -9,12 +9,14 @@ const App = () => (
     <CssBaseline />
     <Store>
       <header>
-        <AppBar position="fixed">
+        <AppBar color="secondary">
           <Datepicker />
         </AppBar>
       </header>
-      <main>
-        <Times />
+      <main style={{marginTop: '3em'}}>
+        <Paper>
+          <Times />
+        </Paper>
       </main>
     </Store>
   </>
