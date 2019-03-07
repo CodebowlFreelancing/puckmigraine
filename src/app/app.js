@@ -9,7 +9,7 @@ const App = () => (
     <CssBaseline />
     <Store>
       <header>
-        <AppBar position="sticky">
+        <AppBar position="fixed">
           <Datepicker />
         </AppBar>
       </header>

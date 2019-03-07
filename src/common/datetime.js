@@ -1,7 +1,9 @@
-import {format, addDays, getYear, getMonth, getDate} from 'date-fns'
+import {format, addDays, getYear, getMonth, getDate, getHours, getMinutes} from 'date-fns'
 import fiLocale from 'date-fns/locale/fi'
 import {curry} from 'ramda'
 import {displayTwoDigits} from './number'
+
+export {getYear, getMonth, getDate, getHours, getMinutes}
 
 const dateFormatFi = 'D.M.YYYY'
 
@@ -9,8 +11,6 @@ export const now = () => new Date()
 
 // not exactly "today" as cannot sense when date changes but enough for now
 export const today = now()
-
-export {getYear, getMonth, getDate}
 
 // date-fns/fp should solve this, flip however needed
 const lazyAddDays = curry((daysToAdd, date) => addDays(date, daysToAdd))
