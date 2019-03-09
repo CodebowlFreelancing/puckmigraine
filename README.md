@@ -1,5 +1,7 @@
 # puckmigraine
 
+Development paused/ended. MigraineBuddy does everything better
+
 migraine diary for personal use
 
 ## next
